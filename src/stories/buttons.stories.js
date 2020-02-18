@@ -1,25 +1,28 @@
-import React from "react";
-import { withKnobs, text, boolean, number } from "@storybook/addon-knobs";
+import React from 'react';
+import { withKnobs, text, boolean } from "@storybook/addon-knobs";
+
+import Buttons from '../Atoms/button';
+import Logo from "../Atoms/globals/logo";
+
+
 
 export default {
-  title: "Storybook Knobs",
-  decorators: [withKnobs]
+    title: "Buttons",
+    decorators: [withKnobs]
 };
-// Add the `withKnobs` decorator to add knobs support to your stories.
-// You can also configure `withKnobs` as a global decorator.
+
+
+export const withText = () => <Buttons>brief me</Buttons>;
 
 // Knobs for React props
-export const withAButton = () => (
-  <button disabled={boolean("Disabled", false)}>
-    {text("Label", "Hello Storybook")}
-  </button>
-);
+export const GreenButton = () => (
+  <Buttons>
+      {text('Label', 'Contact Us')}
+  </Buttons>
+)
 
-// Knobs as dynamic variables.
-export const asDynamicVariables = () => {
-  const name = text("Name", "James");
-  const age = number("Age", 35);
-  const content = `I am ${name} and I'm ${age} years old.`;
-
-  return <div>{content}</div>;
-};
+export const WhiteButton = () => (
+  <Buttons>
+      {text('Label', 'brief me')}
+  </Buttons>
+)
