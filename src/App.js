@@ -1,18 +1,24 @@
 import React from "react";
+import { Body, Footer } from "../src/Template";
+import Nav from '../src/Organism/nav'
+import Menu from '../src/Molecules/menu'
+import Logo from '../src/Atoms/globals/logo'
 
 import "./App.css";
 
-// import { ThemeProvider } from "styled-components";
-// import Button from "./Molecules/button";
-
 function App() {
   return (
-    <div>
-      Hello
-    </div>
-    // <ThemeProvider theme={{ mode: "light" }}>
-    //   <Button>Hey!</Button>
-    // </ThemeProvider>
+    <>
+      <Body>
+        <Nav>
+          <Logo face='logo' text='Joshua Enyi-Christopher'/>
+          <Menu />
+        </Nav>
+
+
+      </Body>
+      <Footer>Footer</Footer>
+    </>
   );
 }
 

@@ -1,28 +1,34 @@
-import React from 'react';
-import { withKnobs, text, boolean } from "@storybook/addon-knobs";
-
-import Buttons from '../Atoms/button';
-import Logo from "../Atoms/globals/logo";
-
+import React from "react";
+import { withKnobs, text } from "@storybook/addon-knobs";
+import Buttons from "../Atoms/button";
+import { ThemeProvider } from "styled-components";
+import {NAVY} from '../Atoms/globals/colors'
 
 
 export default {
-    title: "Buttons",
-    decorators: [withKnobs]
+  title: "Buttons",
+  parameters: {
+    backgrounds: [
+      { name: 'Background', value: `${NAVY}`, default: true },
+    ]
+  },
+  decorators: [withKnobs]
 };
 
-
-export const withText = () => <Buttons>brief me</Buttons>;
+const theme = {
+  mode: "light",
+  
+};
 
 // Knobs for React props
 export const GreenButton = () => (
-  <Buttons>
-      {text('Label', 'Contact Us')}
-  </Buttons>
-)
+  <ThemeProvider theme={theme}>
+    <Buttons variant="secondary">{text("Label", "Contact Me")}</Buttons>
+  </ThemeProvider>
+);
 
 export const WhiteButton = () => (
-  <Buttons>
-      {text('Label', 'brief me')}
-  </Buttons>
-)
+  <ThemeProvider theme={theme}>
+    <Buttons variant="primary">{text("Label", "brief me")}</Buttons>
+  </ThemeProvider>
+);

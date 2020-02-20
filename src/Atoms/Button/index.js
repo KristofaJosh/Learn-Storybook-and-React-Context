@@ -1,27 +1,25 @@
 import React from "react";
-import styled, { ThemeProvider } from "styled-components";
-// import backgroundColor from "./mixin"
-import theme from "styled-theming";
+import styled from "styled-components";
 import Logo from "../globals/logo";
-import { Roboto } from '../globals/font'
+import { backgroundColor, color, hover } from "../globals/colors/mixins";
+// import theme from "styled-theming";
 
 export default function Button(props) {
   return (
-    <ThemeProvider theme={{ mode: `${props.color}` }}>
-      <Btn>
-        {/* {props.children} */}
-        <Logo />
-      </Btn>
-    </ThemeProvider>
+    <Btn variant={props.variant}>
+    {/* <Btn {...props}> */}
+      {props.children}
+      <Logo />
+    </Btn>
   );
 }
 
-const BackgroundColor = theme("mode", { light: "#fff", dark: "#000" });
-// const Color = theme("mode", { light: "#fff", dark: "navy" });
-
 const Btn = styled.button`
-  background-color: ${BackgroundColor};
+  background-color: ${backgroundColor};
   padding: 0.5rem;
-  color: red;
-  font-family: ${Roboto};
-  `;
+  color: ${color};
+  border: none;
+  &:hover {
+    background-color: ${hover};
+  }
+`;
