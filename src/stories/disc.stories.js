@@ -1,6 +1,6 @@
 import React from 'react';
 import Disc from '../Atoms/globals/decorators/disc';
-import { NAVY } from '../Atoms/globals/colors';
+import { NAVY } from '../Atoms/globals/colors/colors';
 
 
 export default {

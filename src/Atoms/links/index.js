@@ -4,14 +4,18 @@ import { color, hover } from "./mixins";
 
 
 export default function Nav(props) {
-    let slash = '';
+    let slash, arrow = '';
 
     if (props.isActive) {
         slash = '/';
+    }
+
+    if (props.isSocialActive) {
+        arrow = '->';
     } 
     return (
         <Linknav variant={props.variant}>
-            {slash}{props.children}{slash}
+            {slash || arrow }{props.children}{slash}
         </Linknav>
     )
 }

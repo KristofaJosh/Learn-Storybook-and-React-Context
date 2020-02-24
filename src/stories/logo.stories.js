@@ -1,6 +1,6 @@
 import React from 'react';
 import Logo from '../Atoms/globals/logo';
-import {NAVY} from '../Atoms/globals/colors'
+import {NAVY} from '../Atoms/globals/colors/colors'
 export default {
   title: "Logo",
     parameters: {

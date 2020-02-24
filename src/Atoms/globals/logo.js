@@ -1,6 +1,6 @@
 import React from "react";
 import styled from "styled-components";
-import { GREEN } from "../globals/colors";
+import { GREEN } from "../globals/colors/colors";
 
 export default function logo(props) {
   let logo = "";
@@ -22,11 +22,13 @@ const Logo = styled.span`
   font-weight: 700;
   display: flex;
   align-items: center;
+  font-size: 2rem;
+
 
   span {
     margin-left: 0.3rem;
     color: white;
-    font-weight: 600;
-    font-size: 0.75rem;
+    font-weight: 500;
+    font-size: 1.35rem;
   }
 `;

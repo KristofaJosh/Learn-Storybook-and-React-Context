@@ -1,11 +1,11 @@
-import React, {useState} from "react";
+import React, { useState } from "react";
 import styled from "styled-components";
 import Links from "../Atoms/links";
 import { ThemeProvider } from "styled-components";
 import Button from "../Atoms/button";
 
-export default function menu(props) {
-  // const [isActive, setisActive] = useState(false);
+export default function Menu(props) {
+  const [isActive, setisActive] = useState(false);
 
   const links = ["Home", "About", "Work", "Contacts"];
 
@@ -15,19 +15,19 @@ export default function menu(props) {
 
   return (
     <>
-      <Menu>
+      <MenuStyle>
         <ThemeProvider theme={theme}>
         {links.map(el => (
-          <Links variant="secondary" isActive={false} id={links.indexOf(el)}>{el}</Links>
+          <Links variant="secondary" isActive={isActive} key={links.indexOf(el)}>{el}</Links>
         ))}
-          <Button variant="primary">brief</Button>
+          <Button variant="primary">brief me</Button>
         </ThemeProvider>
-      </Menu>
+      </MenuStyle>
     </>
   );
 }
 
-const Menu = styled.div`
+const MenuStyle = styled.div`
   display: flex;
   justify-content: space-between;
   align-items: center;

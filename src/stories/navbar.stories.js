@@ -1,8 +1,10 @@
 import React from "react";
-import Nav from '../Organism/nav'
-import Menu from '../Molecules/menu'
-import Logo from '../Atoms/globals/logo'
-
+import Nav from '../Organism/nav';
+import Menu from '../Molecules/menu';
+import Logo from '../Atoms/globals/logo';
+// import Text from '../Atoms/text';
+// import { Body, Footer, Contents, Inner } from "../Template";
+// import {BIG, NORMAL, SMALL, VSMALL, BTNNORMAL } from "../Atoms/globals/fontsize";
 
 export default {
   title: "NavBar",
@@ -15,3 +17,5 @@ export const NavBar = () => (
     <Menu />
   </Nav>
 );
+
+

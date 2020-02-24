@@ -2,7 +2,7 @@ import React from "react";
 import { withKnobs, text } from "@storybook/addon-knobs";
 import Buttons from "../Atoms/button";
 import { ThemeProvider } from "styled-components";
-import {NAVY} from '../Atoms/globals/colors'
+import { NAVY } from '../Atoms/globals/colors/colors';
 
 
 export default {
@@ -17,7 +17,6 @@ export default {
 
 const theme = {
   mode: "light",
-  
 };
 
 // Knobs for React props
