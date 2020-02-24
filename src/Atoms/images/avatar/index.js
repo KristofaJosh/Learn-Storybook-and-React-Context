@@ -35,4 +35,10 @@ const Image = styled.div`
   img {
     height: 100%;
   }
+
+  @media (max-width: 400px) {
+    div {
+      display: none;
+    }
+  }
 `;

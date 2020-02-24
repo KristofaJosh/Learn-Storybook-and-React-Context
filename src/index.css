@@ -5,6 +5,10 @@
   sans-serif;
 }
 
+a {
+  text-decoration: none !important;
+}
+
 @media (max-width: 1200px){
   * {
     font-size: 0.8rem;

@@ -1,22 +1,15 @@
 import React from "react";
-import { Body, Footer, Contents, Inner, Heading } from "../src/Template";
+import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
+import { Body, Footer, Contents, Inner } from "../src/Template";
 import Text from "../src/Atoms/text";
 import Nav from "../src/Organism/nav";
 import Menu from "./Molecules/menu";
 import Logo from "../src/Atoms/globals/logo";
-// import Avatar from "../src/Atoms/images/avatar";
-// import Buttons from "../src/Atoms/button";
-// import List from "../src/Molecules/list";
-// import Disc from "../src/Atoms/globals/decorators/disc"
-// import { ThemeProvider } from "styled-components";
-// import { GREEN } from "../src/Atoms/globals/colors/colors";
 import { VSMALL, MEDIUM } from "../src/Atoms/globals/fontsize";
-// import IMAGE from "../src/Atoms/images/avatar/test.jpg";
 import Social from "../src/Molecules/socials";
-// import HeroText from "../src/Organism/herotext";
-import About from '../src/Page/about';
-import Home from '../src/Page/home';
-import Works from '../src/Atoms/images/works'
+import About from "../src/Page/about";
+import Home from "../src/Page/home";
+import Works from "../src/Page/work";
 
 import "./App.css";
 
@@ -34,12 +27,17 @@ function App() {
           <Menu />
         </Nav>
 
-        <Home/>
+        {/* <> */}
+          <Router>
+            <Switch>
+              <Route path="/About" component={About} />
+              <Route path="/home" component={Home} />
+              <Route path="/" component={Home} />
+            </Switch>
+          </Router>
+        {/* </> */}
 
-        <Works/>
-
-        <About/>
-
+        <Works />
       </Body>
 
       <Footer>

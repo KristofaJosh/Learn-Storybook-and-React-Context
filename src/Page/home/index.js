@@ -1,7 +1,7 @@
 import React from "react";
 import { Contents, Inner } from "../../Template";
 import Avatar from "../../Atoms/images/avatar";
-import IMAGE from "../../Atoms/images/avatar/test.jpg";
+import IMAGE from "../../Atoms/images/avatar/default.gif";
 import HeroText from "../../Organism/herotext";
 import Social from "../../Molecules/socials";
 
